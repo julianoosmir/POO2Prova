@@ -43,7 +43,7 @@ public class DoencaDao implements InterfaceDao<Doenca> {
                 System.out.println(rs);
                 Doenca doenca = new Doenca();
 
-                doenca.setId(rs.getLong("id"));
+                doenca.setId(rs.getLong("doencaId"));
                 doenca.setCID(rs.getString("cid"));
                 doenca.setNome(rs.getString("nome"));
 

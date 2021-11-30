@@ -2,7 +2,7 @@ package models;
 
 public class Medicamento {
     private Long id;
-    private String Nome;
+    private String nome;
     private String laboratorioFabricante;
     private String principioAtivo;  
     private Doenca doenca;
@@ -16,17 +16,17 @@ public class Medicamento {
     }
     
     public String getNome() {
-        return this.Nome;
+        return this.nome;
     }
 
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
 
-    public Medicamento Nome(String Nome) {
-        setNome(Nome);
+    public Medicamento Nome(String nome) {
+        setNome(nome);
         return this;
     }
 

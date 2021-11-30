@@ -1,5 +1,6 @@
 package EntityDao;
 
+import Controllers.DoencaController;
 import dao.InterfaceDao;
 import models.Medicamento;
 import server.ConnectionFactory;
@@ -15,6 +16,8 @@ import java.util.logging.Logger;
 
 public class MedicamentosDao implements InterfaceDao<Medicamento> {
     private PreparedStatement stmt = null;
+    DoencaController doenca = new DoencaController();
+
 
     @Override
     public void create(Medicamento medicamento) {
@@ -50,7 +53,7 @@ public class MedicamentosDao implements InterfaceDao<Medicamento> {
                 medicamento.setNome(rs.getString("nome"));
                 medicamento.setLaboratorioFabricante(rs.getString("laboratorioFabricante"));
                 medicamento.setPrincipioAtivo(rs.getString("principioAtivo"));
-
+                medicamento.setDoenca(doenca.buscarDoenca(rs.getLong("doenca")));
                 medicamentos.add(medicamento);
             }
 
