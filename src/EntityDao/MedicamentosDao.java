@@ -59,8 +59,6 @@ public class MedicamentosDao implements InterfaceDao<Medicamento> {
 
         } catch (SQLException ex) {
             Logger.getLogger(DoencaDao.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            ConnectionFactory.closeConnection(con, stmt, rs);
         }
 
         return medicamentos;

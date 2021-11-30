@@ -2,7 +2,6 @@ package EntityDao;
 
 import dao.InterfaceDao;
 import models.Doenca;
-import server.ConnectionFactory;
 
 import javax.swing.*;
 import java.sql.PreparedStatement;
@@ -26,8 +25,6 @@ public class DoencaDao implements InterfaceDao<Doenca> {
             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         } catch (SQLException ex) {
             System.out.println(ex);
-        } finally {
-            ConnectionFactory.closeConnection(con, stmt);
         }
     }
 
@@ -52,10 +49,7 @@ public class DoencaDao implements InterfaceDao<Doenca> {
 
         } catch (SQLException ex) {
             Logger.getLogger(DoencaDao.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            ConnectionFactory.closeConnection(con, stmt, rs);
         }
-
         return doencas;
 
     }
@@ -83,8 +77,6 @@ public class DoencaDao implements InterfaceDao<Doenca> {
 
         } catch (SQLException ex) {
             Logger.getLogger(DoencaDao.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            ConnectionFactory.closeConnection(con, stmt, rs);
         }
         return doenca;
     }
