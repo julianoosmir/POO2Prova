@@ -7,7 +7,6 @@ import java.util.List;
 
 public class TelaDeMedicamentos extends JDialog {
 
-
     public TelaDeMedicamentos(List<Medicamento> todos) {
         TelaDeMedicamentosCadastrados tab = new TelaDeMedicamentosCadastrados(todos);
         add(new JScrollPane(new JTable(tab)));
