@@ -16,7 +16,7 @@ public class TelaDeMedicamentosCadastrados extends ViewAbstractTableModel<Medica
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Medicamento medicamento = rows.get(columnIndex);
+        Medicamento medicamento = rows.get(rowIndex);
 
         switch (columnIndex) {
             case 0:

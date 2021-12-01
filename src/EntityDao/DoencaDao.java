@@ -60,21 +60,18 @@ public class DoencaDao implements InterfaceDao<Doenca> {
         ResultSet rs = null;
         Doenca doenca = new Doenca();
         try {
-            stmt = con.prepareStatement("SELECT * FROM Doenca where id = ?");
+            stmt = con.prepareStatement("SELECT * FROM Doenca where doencaId = ?");
             stmt.setLong(1, id);
             rs = stmt.executeQuery();
 
             while (rs.next()) {
                 System.out.println(rs);
 
-
-                doenca.setId(rs.getLong("id"));
+                doenca.setId(rs.getLong("doencaId"));
                 doenca.setCID(rs.getString("cid"));
                 doenca.setNome(rs.getString("nome"));
-
-
             }
-
+            return doenca;
         } catch (SQLException ex) {
             Logger.getLogger(DoencaDao.class.getName()).log(Level.SEVERE, null, ex);
         }

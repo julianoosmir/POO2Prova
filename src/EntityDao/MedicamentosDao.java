@@ -21,8 +21,7 @@ public class MedicamentosDao implements InterfaceDao<Medicamento> {
     @Override
     public void create(Medicamento medicamento) {
         try {
-            stmt = con.prepareStatement("INSERT INTO Medicamento(nome,laboratorioFabricante,principioAtivo,doenca)" +
-                    "VALUES(?,?,?,?)");
+            stmt = con.prepareStatement("INSERT INTO Medicamento(nome,laboratorioFabricante,principioAtivo,doenca) VALUES(?,?,?,?)");
             stmt.setString(1, medicamento.getNome());
             stmt.setString(2, medicamento.getLaboratorioFabricante());
             stmt.setString(3, medicamento.getPrincipioAtivo());
