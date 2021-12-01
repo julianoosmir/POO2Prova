@@ -3,7 +3,6 @@ package EntityDao;
 import Controllers.DoencaController;
 import dao.InterfaceDao;
 import models.Medicamento;
-import server.ConnectionFactory;
 
 import javax.swing.*;
 import java.sql.PreparedStatement;
@@ -32,8 +31,6 @@ public class MedicamentosDao implements InterfaceDao<Medicamento> {
             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         } catch (SQLException ex) {
             System.out.println(ex);
-        } finally {
-            ConnectionFactory.closeConnection(con, stmt);
         }
     }
 

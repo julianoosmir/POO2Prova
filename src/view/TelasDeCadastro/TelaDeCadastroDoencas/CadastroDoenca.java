@@ -7,13 +7,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class CadastroDoenca extends JDialog {
     JButton buttonInserir = new JButton("inserir");
-    private TabelaDeDoencas tab;
+    JButton buttonMostrar = new JButton("mostrar");
+
     DoencaController con = new DoencaController();
+
     public CadastroDoenca() {
-        setSize(450, 400);
+        setSize(500, 200);
+        setTitle("Cadastrar Doenças");
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         add(new JLabel("nome :"));
@@ -22,24 +26,32 @@ public class CadastroDoenca extends JDialog {
         add(new JLabel("CID :"));
         JTextField cid = new JTextField(10);
         add(cid);
-        add(buttonInserir);
-        tab = new  TabelaDeDoencas(con.todos());
-        add(new JTable(tab));
+
         buttonInserir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                inserir(nome.getText(),cid.getText(),tab);
-                tab.fireTableDataChanged();
+                inserir(nome.getText(), cid.getText());
             }
         });
+        buttonMostrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mostrar(con.todos());
+            }
+        });
+        add(buttonInserir);
+        add(buttonMostrar);
     }
-    public void inserir(String nome, String cid,TabelaDeDoencas tabela ){
-        Doenca doenca =new Doenca();
+
+    public void inserir(String nome, String cid) {
+        Doenca doenca = new Doenca();
         doenca.setNome(nome);
         doenca.setCID(cid);
         con.create(doenca);
-        tabela.fireTableDataChanged();
     }
 
+    public void mostrar(List<Doenca> doencas) {
+       new TelaDeDoencasCadastradas(doencas).setVisible(true);
+    }
 
 }

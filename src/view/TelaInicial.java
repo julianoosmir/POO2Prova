@@ -6,7 +6,7 @@ public class TelaInicial extends JFrame {
     Menu menu = new Menu();
     public TelaInicial(){
         setTitle("tela inicial");
-        setSize(400,400);
+        setSize(250,200);
         add(menu);
 
     }
