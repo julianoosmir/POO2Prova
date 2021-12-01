@@ -5,9 +5,10 @@ import view.resouces.ViewAbstractTableModel;
 
 import java.util.List;
 /*
-Nome: Juliano Cesar Osmir Hein RA: 339112013098
-Curso: Ciência da Computação Data: 29/09/2021
-*/
+ *  Nome: Juliano Cesar Osmir hein RA: 339112013098
+ *  Curso: ciencia da computação data: 30/11/2021
+ *
+ */
 public class TabelaDeDoencas extends ViewAbstractTableModel<Doenca> {
     public TabelaDeDoencas(List<Doenca> rows) {
         super(rows);

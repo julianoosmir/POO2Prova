@@ -8,7 +8,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-
+/*
+ *  Nome: Juliano Cesar Osmir hein RA: 339112013098
+ *  Curso: ciencia da computação data: 30/11/2021
+ *
+ */
 public class CadastroDoenca extends JDialog {
     JButton buttonInserir = new JButton("inserir");
     JButton buttonMostrar = new JButton("mostrar");

@@ -12,7 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/*
+ *  Nome: Juliano Cesar Osmir hein RA: 339112013098
+ *  Curso: ciencia da computação data: 30/11/2021
+ *
+ */
 public class MedicamentosDao implements InterfaceDao<Medicamento> {
     private PreparedStatement stmt = null;
     DoencaController doenca = new DoencaController();

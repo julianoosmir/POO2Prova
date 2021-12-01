@@ -4,7 +4,11 @@ import models.Medicamento;
 import view.resouces.ViewAbstractTableModel;
 
 import java.util.List;
-
+/*
+ *  Nome: Juliano Cesar Osmir hein RA: 339112013098
+ *  Curso: ciencia da computação data: 30/11/2021
+ *
+ */
 public class TelaDeMedicamentosCadastrados extends ViewAbstractTableModel<Medicamento> {
     public TelaDeMedicamentosCadastrados(List<Medicamento> rows) {
         super(rows);

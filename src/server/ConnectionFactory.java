@@ -6,7 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/*
+ *  Nome: Juliano Cesar Osmir hein RA: 339112013098
+ *  Curso: ciencia da computação data: 30/11/2021
+ *
+ */
 public class ConnectionFactory {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
